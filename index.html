@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hola Mi Vida 💛</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:linear-gradient(180deg,#0f172a,#1e293b,#334155);
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+color:white;
+}
+
+/* Fondo estrellas */
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{
+opacity:0.2;
+}
+50%{
+opacity:1;
+}
+}
+
+/* Contenedor principal */
+
+.container{
+position:relative;
+z-index:10;
+text-align:center;
+padding:30px;
+max-width:90%;
+animation:fadeIn 2s ease;
+}
+
+h1{
+font-size:4rem;
+color:#ffd54f;
+text-shadow:0 0 20px rgba(255,213,79,0.8);
+margin-bottom:20px;
+}
+
+.message{
+font-size:1.4rem;
+line-height:2rem;
+color:#f8fafc;
+margin-bottom:30px;
+}
+
+/* Carta */
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,0.1);
+}
+
+/* Flores */
+
+.flower{
+position:absolute;
+font-size:30px;
+animation:fall linear infinite;
+opacity:0.9;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+/* Brillos */
+
+.sparkle{
+position:absolute;
+width:4px;
+height:4px;
+background:#fff;
+border-radius:50%;
+animation:sparkle 2s infinite;
+}
+
+@keyframes sparkle{
+0%,100%{
+opacity:0;
+transform:scale(0.5);
+}
+50%{
+opacity:1;
+transform:scale(1.5);
+}
+}
+
+.music{
+margin-top:25px;
+}
+
+iframe{
+border-radius:20px;
+width:100%;
+max-width:350px;
+height:80px;
+}
+
+.signature{
+margin-top:20px;
+font-size:0.9rem;
+opacity:0.7;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:600px){
+
+h1{
+font-size:2.7rem;
+}
+
+.message{
+font-size:1.1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Hola Mi Vida 💛</h1>
+
+<p class="message">
+Eres mi lugar favorito,<br>
+mi casualidad más bonita<br>
+y la persona que ilumina mis días 🌻✨
+</p>
+
+<div class="music">
+
+<iframe 
+style="border-radius:12px" 
+src="https://open.spotify.com/embed/track/0nvSzd2KP9t01PTBBtPXLr?utm_source=generator"
+frameBorder="0" 
+allowfullscreen="" 
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+<div class="signature">
+Hecho con mucho cariño 💖
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* Estrellas */
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement('div');
+star.classList.add('star');
+
+star.style.left=Math.random()*100+'vw';
+star.style.top=Math.random()*100+'vh';
+
+star.style.animationDuration=
+(2+Math.random()*4)+'s';
+
+document.querySelector('.stars').appendChild(star);
+
+}
+
+/* Flores */
+
+for(let i=0;i<35;i++){
+
+let flower=document.createElement('div');
+
+flower.classList.add('flower');
+
+flower.innerHTML='🌻';
+
+flower.style.left=Math.random()*100+'vw';
+
+flower.style.animationDuration=
+(5+Math.random()*10)+'s';
+
+flower.style.fontSize=
+(20+Math.random()*30)+'px';
+
+document.body.appendChild(flower);
+
+}
+
+/* Brillos */
+
+for(let i=0;i<40;i++){
+
+let sparkle=document.createElement('div');
+
+sparkle.classList.add('sparkle');
+
+sparkle.style.left=Math.random()*100+'vw';
+sparkle.style.top=Math.random()*100+'vh';
+
+sparkle.style.animationDuration=
+(1+Math.random()*3)+'s';
+
+document.body.appendChild(sparkle);
+
+}
+
+</script>
+
+</body>
+</html>
+```3
